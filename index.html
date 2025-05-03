@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datha Tourism Safari's</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background-color: #2c3e50; color: white; padding: 20px 0; text-align: center; }
+        nav { background-color: #34495e; padding: 10px; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; cursor: pointer; }
+        section { padding: 20px; display: none; }
+        .active { display: block; }
+        .gallery img { width: 100%; max-width: 300px; margin: 10px; border-radius: 10px; }
+        .gallery { display: flex; flex-wrap: wrap; justify-content: center; }
+        footer { background-color: #2c3e50; color: white; text-align: center; padding: 20px; }
+        .lang-switch { margin-top: 10px; }
+        .lang-switch button { margin: 0 5px; padding: 5px 10px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="title">Welcome to Datha Tourism Safari's</h1>
+        <p id="subtitle">Explore the beauty of Tanzania with us</p>
+        <div class="lang-switch">
+            <button onclick="setLanguage('en')">English</button>
+            <button onclick="setLanguage('sw')">Kiswahili</button>
+        </div>
+    </header>
+
+    <nav>
+        <a onclick="showSection('home')" id="nav-home">Home</a>
+        <a onclick="showSection('gallery')" id="nav-gallery">Gallery</a>
+        <a onclick="showSection('contact')" id="nav-contact">Contact Us</a>
+    </nav>
+
+    <section id="home" class="active">
+        <h2 id="home-title">About Us</h2>
+        <p id="home-desc">
+            Datha Tourism Safari's is your trusted guide to unforgettable adventures across Tanzania.
+            From Serengeti safaris to Mount Kilimanjaro hikes, we provide tailored travel experiences that
+            showcase the wonders of our land.
+        </p>
+    </section>
+
+    <section id="gallery">
+        <h2 id="gallery-title">Gallery</h2>
+        <div class="gallery">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Serengeti_Landscape.jpg" alt="Serengeti">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Mount_Kilimanjaro_01.jpg" alt="Kilimanjaro">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Zanzibar_Beach.jpg" alt="Zanzibar Beach">
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 id="contact-title">Contact Us</h2>
+        <p><strong id="phone-label">Phone:</strong> +255658259202</p>
+        <p><strong id="email-label">Email:</strong> Dathanshahp01@gmail.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Datha Tourism Safari's. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                title: "Welcome to Datha Tourism Safari's",
+                subtitle: "Explore the beauty of Tanzania with us",
+                "nav-home": "Home",
+                "nav-gallery": "Gallery",
+                "nav-contact": "Contact Us",
+                "home-title": "About Us",
+                "home-desc": "Datha Tourism Safari's is your trusted guide to unforgettable adventures across Tanzania. From Serengeti safaris to Mount Kilimanjaro hikes, we provide tailored travel experiences that showcase the wonders of our land.",
+                "gallery-title": "Gallery",
+                "contact-title": "Contact Us",
+                "phone-label": "Phone:",
+                "email-label": "Email:"
+            },
+            sw: {
+                title: "Karibu Datha Tourism Safari's",
+                subtitle: "Gundua uzuri wa Tanzania pamoja nasi",
+                "nav-home": "Nyumbani",
+                "nav-gallery": "Picha",
+                "nav-contact": "Wasiliana Nasi",
+                "home-title": "Kuhusu Sisi",
+                "home-desc": "Datha Tourism Safari's ni mwongozo wako wa kuaminika kwa safari zisizosahaulika kote Tanzania. Kutoka kwenye safari za Serengeti hadi kupanda Mlima Kilimanjaro, tunatoa uzoefu wa kipekee wa kusafiri unaoonyesha maajabu ya nchi yetu.",
+                "gallery-title": "Picha",
+                "contact-title": "Wasiliana Nasi",
+                "phone-label": "Simu:",
+                "email-label": "Barua pepe:"
+            }
+        };
+
+        function setLanguage(lang) {
+            const t = translations[lang];
+            for (let key in t) {
+                const el = document.getElementById(key);
+                if (el) el.textContent = t[key];
+            }
+        }
+
+        function showSection(id) {
+            document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+            document.getElementById(id).classList.add("active");
+        }
+    </script>
+</body>
+</html>
