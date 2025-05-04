@@ -116,9 +116,44 @@
     <h2>Contact Us</h2>
     <p>Phone: +255658259202</p>
     <p>Email: Dathanshahp01@gmail.com</p>
+  
   </section>
 
-  <footer>
+  <section id="booking">
+    <h2>Book Your Safari</h2>
+    <form action="https://formspree.io/f/mwkgyqzj" method="POST" style="max-width: 500px; margin: 0 auto; text-align: left;">
+      <label for="name">Full Name:</label><br>
+      <input type="text" id="name" name="name" required style="width: 100%; padding: 8px;"><br><br>
+
+      <label for="email">Email Address:</label><br>
+      <input type="email" id="email" name="email" required style="width: 100%; padding: 8px;"><br><br>
+
+      <label for="phone">Phone Number:</label><br>
+      <input type="tel" id="phone" name="phone" required style="width: 100%; padding: 8px;"><br><br>
+
+      <label for="date">Preferred Travel Date:</label><br>
+      <input type="date" id="date" name="date" required style="width: 100%; padding: 8px;"><br><br>
+
+      <label for="group-size">Group Size:</label><br>
+      <input type="number" id="group-size" name="group-size" min="1" required style="width: 100%; padding: 8px;"><br><br>
+
+      <label for="package">Select Package:</label><br>
+      <select id="package" name="package" required style="width: 100%; padding: 8px;">
+        <option value="safari">Wildlife Safari</option>
+        <option value="kilimanjaro">Kilimanjaro Trekking</option>
+        <option value="zanzibar">Zanzibar Beach Holiday</option>
+        <option value="custom">Custom Tour</option>
+      </select><br><br>
+
+      <label for="details">Additional Information:</label><br>
+      <textarea id="details" name="details" rows="4" style="width: 100%; padding: 8px;"></textarea><br><br>
+
+      <button type="submit" style="padding: 10px 20px; background-color: #28a745; color: white; border: none; cursor: pointer; border-radius: 5px;">
+        Submit Booking
+      </button>
+    </form>
+  </section>
+
     <p>&copy; 2025 Datha Tourism Safari's | All rights reserved</p>
   </footer>
 
