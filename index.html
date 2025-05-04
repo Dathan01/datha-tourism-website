@@ -5,138 +5,117 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Datha Tourism Safari's</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    header { background-color: #2c3e50; color: white; padding: 20px 0; text-align: center; }
-    nav { background-color: #34495e; padding: 10px; text-align: center; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; cursor: pointer; }
-    section { padding: 20px; display: none; }
-    .active { display: block; }
-    .gallery img { width: 100%; max-width: 300px; margin: 10px; border-radius: 10px; }
-    .gallery { display: flex; flex-wrap: wrap; justify-content: center; }
-    footer { background-color: #2c3e50; color: white; text-align: center; padding: 20px; }
-    .lang-switch { margin-top: 10px; }
-    .lang-switch button { margin: 0 5px; padding: 5px 10px; }
-    form { max-width: 500px; margin: auto; }
-    form input, form select, form textarea { width: 100%; margin-bottom: 10px; padding: 10px; }
-    form button { padding: 10px 20px; background-color: #34495e; color: white; border: none; cursor: pointer; }
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    header {
+      background: url('https://upload.wikimedia.org/wikipedia/commons/e/e0/Serengeti_Landscape.jpg') no-repeat center center/cover;
+      height: 100vh;
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      background: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+    }
+    header h1, header p {
+      z-index: 1;
+      position: relative;
+    }
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.5em;
+      margin-top: 10px;
+    }
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 0 20px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .lang-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 1;
+    }
+    .lang-switch button {
+      margin: 0 5px;
+      padding: 5px 10px;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1 id="title">Welcome to Datha Tourism Safari's</h1>
-    <p id="subtitle">Explore the beauty of Tanzania with us</p>
     <div class="lang-switch">
       <button onclick="setLanguage('en')">English</button>
       <button onclick="setLanguage('sw')">Kiswahili</button>
     </div>
+    <h1 id="hero-title">Welcome to Datha Tourism Safari's</h1>
+    <p id="hero-subtitle">Your gateway to unforgettable adventures in Tanzania</p>
   </header>
 
-  <nav>
-    <a onclick="showSection('home')" id="nav-home">Home</a>
-    <a onclick="showSection('services')" id="nav-services">Services</a>
-    <a onclick="showSection('gallery')" id="nav-gallery">Gallery</a>
-    <a onclick="showSection('booking')" id="nav-booking">Booking</a>
-    <a onclick="showSection('contact')" id="nav-contact">Contact</a>
-  </nav>
-
-  <section id="home" class="active">
-    <h2 id="home-title">About Us</h2>
-    <p id="home-desc">
-      Datha Tourism Safari's is your trusted guide to unforgettable adventures across Tanzania.
-      From Serengeti safaris to Mount Kilimanjaro hikes, we provide tailored travel experiences that
-      showcase the wonders of our land.
-    </p>
+  <section>
+    <h2 id="intro-title">Why Travel With Us?</h2>
+    <p id="intro-desc">We offer tailored safaris, mountain treks, and beach escapes across Tanzania’s iconic destinations like Serengeti, Kilimanjaro, and Zanzibar.</p>
   </section>
 
-  <section id="services">
-    <h2 id="services-title">Our Services</h2>
-    <div id="service-list">
-      <h3 id="service1">Serengeti Wildlife Safaris</h3>
-      <p>Experience the famous Big Five and the Great Migration in Tanzania's iconic Serengeti National Park.</p>
-      <h3 id="service2">Mount Kilimanjaro Climbing Tours</h3>
-      <p>Challenge yourself and conquer Africa’s highest peak with our expert-guided treks.</p>
-      <h3 id="service3">Zanzibar Beach Holidays</h3>
-      <p>Relax on the pristine white sands of Zanzibar and enjoy the rich Swahili culture and history.</p>
-    </div>
-  </section>
-
-  <section id="gallery">
-    <h2 id="gallery-title">Gallery</h2>
+  <section>
+    <h2 id="gallery-title">Explore Our Destinations</h2>
     <div class="gallery">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Serengeti_Landscape.jpg" alt="Serengeti">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Mount_Kilimanjaro_01.jpg" alt="Kilimanjaro">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Kilimanjaro_2006.jpg" alt="Mount Kilimanjaro">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Serengeti_Landscape.jpg" alt="Serengeti Safari">
       <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Zanzibar_Beach.jpg" alt="Zanzibar Beach">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Ngorongoro_Crater.jpg" alt="Ngorongoro Crater">
     </div>
-  </section>
-
-  <section id="booking">
-    <h2 id="booking-title">Book a Safari</h2>
-    <form>
-      <input type="text" id="name" placeholder="Your Name" required />
-      <input type="email" id="email" placeholder="Your Email" required />
-      <select id="tourType" required>
-        <option value="">Select Safari Type</option>
-        <option value="serengeti">Serengeti Safari</option>
-        <option value="kilimanjaro">Kilimanjaro Trek</option>
-        <option value="zanzibar">Zanzibar Holiday</option>
-      </select>
-      <input type="date" id="date" required />
-      <textarea id="message" placeholder="Additional Message"></textarea>
-      <button type="submit">Submit</button>
-    </form>
-  </section>
-
-  <section id="contact">
-    <h2 id="contact-title">Contact Us</h2>
-    <p><strong id="phone-label">Phone:</strong> +255658259202</p>
-    <p><strong id="email-label">Email:</strong> Dathanshahp01@gmail.com</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Datha Tourism Safari's. All rights reserved.</p>
+    <p>&copy; 2025 Datha Tourism Safari's | Phone: +255658259202 | Email: Dathanshahp01@gmail.com</p>
   </footer>
 
   <script>
     const translations = {
       en: {
-        title: "Welcome to Datha Tourism Safari's",
-        subtitle: "Explore the beauty of Tanzania with us",
-        "nav-home": "Home",
-        "nav-services": "Services",
-        "nav-gallery": "Gallery",
-        "nav-booking": "Booking",
-        "nav-contact": "Contact",
-        "home-title": "About Us",
-        "home-desc": "Datha Tourism Safari's is your trusted guide to unforgettable adventures across Tanzania. From Serengeti safaris to Mount Kilimanjaro hikes, we provide tailored travel experiences that showcase the wonders of our land.",
-        "services-title": "Our Services",
-        "service1": "Serengeti Wildlife Safaris",
-        "service2": "Mount Kilimanjaro Climbing Tours",
-        "service3": "Zanzibar Beach Holidays",
-        "gallery-title": "Gallery",
-        "booking-title": "Book a Safari",
-        "contact-title": "Contact Us",
-        "phone-label": "Phone:",
-        "email-label": "Email:"
+        "hero-title": "Welcome to Datha Tourism Safari's",
+        "hero-subtitle": "Your gateway to unforgettable adventures in Tanzania",
+        "intro-title": "Why Travel With Us?",
+        "intro-desc": "We offer tailored safaris, mountain treks, and beach escapes across Tanzania’s iconic destinations like Serengeti, Kilimanjaro, and Zanzibar.",
+        "gallery-title": "Explore Our Destinations"
       },
       sw: {
-        title: "Karibu Datha Tourism Safari's",
-        subtitle: "Gundua uzuri wa Tanzania pamoja nasi",
-        "nav-home": "Nyumbani",
-        "nav-services": "Huduma",
-        "nav-gallery": "Picha",
-        "nav-booking": "Hifadhi Safari",
-        "nav-contact": "Wasiliana",
-        "home-title": "Kuhusu Sisi",
-        "home-desc": "Datha Tourism Safari's ni mwongozo wako wa kuaminika kwa safari zisizosahaulika kote Tanzania. Kutoka kwenye safari za Serengeti hadi kupanda Mlima Kilimanjaro, tunatoa uzoefu wa kipekee wa kusafiri unaoonyesha maajabu ya nchi yetu.",
-        "services-title": "Huduma Zetu",
-        "service1": "Safari za Wanyamapori Serengeti",
-        "service2": "Kupanda Mlima Kilimanjaro",
-        "service3": "Likizo za Ufukweni Zanzibar",
-        "gallery-title": "Picha",
-        "booking-title": "Hifadhi Safari",
-        "contact-title": "Wasiliana Nasi",
-        "phone-label": "Simu:",
-        "email-label": "Barua pepe:"
+        "hero-title": "Karibu Datha Tourism Safari's",
+        "hero-subtitle": "Mlango wako wa safari zisizosahaulika Tanzania",
+        "intro-title": "Kwa Nini Utusafiri Nasi?",
+        "intro-desc": "Tunatoa safari maalum, kupanda milima, na mapumziko ya fukweni katika maeneo maarufu ya Tanzania kama Serengeti, Kilimanjaro na Zanzibar.",
+        "gallery-title": "Gundua Vivutio Vyetu"
       }
     };
 
@@ -146,11 +125,6 @@
         const el = document.getElementById(key);
         if (el) el.textContent = t[key];
       }
-    }
-
-    function showSection(id) {
-      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
-      document.getElementById(id).classList.add("active");
     }
   </script>
 </body>
