@@ -1,1 +1,46 @@
-initial website upload 
+<title>Datha Tourism Safari's | Explore Tanzania Safaris & Zanzibar Holidays</title>
+<meta name="description" content="Datha Tourism Safari's offers unforgettable safaris, Kilimanjaro trekking, Zanzibar beach holidays, and cultural tours in Tanzania. Book your adventure today!">
+<meta name="keywords" content="Tanzania safari, Zanzibar holidays, Kilimanjaro trekking, Serengeti tour, Datha Tourism Safari">
+<meta name="author" content="Datha Tourism Safari's">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<img src="images/serengeti.jpg" alt="Serengeti Safari Jeep Tour" loading="lazy">
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+  <input type="text" name="name" placeholder="Full Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <input type="tel" name="phone" placeholder="Phone Number" required>
+  <textarea name="message" placeholder="Your Booking Details"></textarea>
+  <button type="submit">Book Now</button>
+</form>
+body {
+  font-size: 16px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+button, input, textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+}
+<section id="testimonials">
+  <h2>What Our Guests Say</h2>
+  <div class="testimonial">
+    <p>"An unforgettable safari experience! Professional guides and amazing wildlife." – Sarah, UK</p>
+  </div>
+  <div class="testimonial">
+    <p>"Best Kilimanjaro trekking team ever! Highly recommend Datha Tourism Safari’s." – John, USA</p>
+  </div>
+</section>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXX');
+</script>
